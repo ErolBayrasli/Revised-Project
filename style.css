@@ -1,0 +1,184 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+/* NAVBAR STYLES */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px 100px;
+  background-color: transparent;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100;
+ 
+}
+
+.logo {
+  font-size: 35px;
+  color: #000000;
+  text-decoration: none;
+  font-weight: 700;
+}
+.navbar a {
+  position: relative;
+  font-size: 18px;
+  color: #000;
+  font-weight: 500;
+  text-decoration: none;
+  margin-left: 40px;
+}
+
+.navbar a::before {
+  content: '';
+  position: absolute;
+  top: 100%;
+  width: 0;
+  left: 0;
+  height: 2px;
+  background: #4e4e50;
+  transition: .3s;
+}
+
+.navbar a:hover::before {
+  width: 100%;
+}
+
+/* BACKGROUND ANIMATION */
+.row {
+  background: #c0c0be;;
+  height: 10vh;
+  width: 100%;
+  animation: fade 5s infinite;
+  animation-direction: alternate;
+}
+.row-1 {
+}
+.row-2 {
+  animation-delay:0.5s;
+}
+.row-3 {
+  animation-delay:1s;
+}
+.row-4 {
+  animation-delay:1.5s;
+}
+.row-5 {
+  animation-delay:2s;
+}
+.row-6 {
+  animation-delay:2.5s;
+}
+.row-7 {
+  animation-delay:3s;
+}
+.row-8 {
+  animation-delay:3.5s;
+}
+
+.row-9 {
+  animation-delay:4s;
+}
+.row-10 {
+  animation-delay:4.5s;
+}
+
+@keyframes fade {
+  from { background: #2D3236; }
+  to { background: #F5F2EC; }
+}
+
+/* ANIMATED ELEMENTS */
+.text-pop-up-top h1 {
+  text-align: center;
+  font-size: 80px;
+  margin-top: 100px;
+  color: #4e4e50;
+}
+
+.text-pop-up-top {
+	animation: text-pop-up-top 1.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+@keyframes text-pop-up-top {
+    0% {
+      transform: translateY(0);
+      transform-origin: 50% 50%;
+      text-shadow: none;
+    }
+    100% {
+      transform: translateY(-50px);
+      transform-origin: 50% 50%;
+      text-shadow: 0 1px 0 #cccccc, 0 2px 0 #cccccc, 0 3px 0 #cccccc, 0 4px 0 #cccccc, 0 5px 0 #cccccc, 0 6px 0 #cccccc, 0 7px 0 #cccccc, 0 8px 0 #cccccc, 0 9px 0 #cccccc, 0 50px 30px rgba(0, 0, 0, 0.3);
+    }
+  }
+
+  /* STYLES */
+  .content {
+    position: absolute;
+    top: 100px; /* Navbar is 80px high, this pushes the content down to clear the navbar */
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+  }
+
+  .text{
+    margin: auto;
+    width: 50%;
+    border: 3px solid rgb(129, 133, 129);
+    padding: 10px;
+
+  }
+
+
+
+
+
+
+/* TITLE PAGE STYLES */
+.titlepage {
+  background-image: url('title\ img.png');
+  background-size: cover; /* Scales the image to cover the entire element */
+  background-position: center; /* Centers the image within the element */
+  background-repeat: no-repeat; /* Prevents the image from repeating */
+  height: 800px; /* Example height for the element */
+  width: 100%; /* Example width for the element */
+}
+
+.clothing-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    justify-content: center;
+    margin: 40px 0;
+}
+
+.clothing-item {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    padding: 16px;
+    text-align: center;
+    width: 200px;
+}
+
+.clothing-item img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.gallery-title {
+    text-align: center;
+    margin-top: 40px;
+    font-size: 2rem;
+    color: #333;
+}
