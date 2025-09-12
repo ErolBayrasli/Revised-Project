@@ -131,7 +131,7 @@
   .text{
     margin: auto;
     width: 50%;
-    border: 3px solid rgb(129, 133, 129);
+    border: 3px solid rgb(197, 201, 197);
     padding: 10px;
 
   }
@@ -139,7 +139,9 @@
 
 
 
-
+.bg{
+  background-color: #d4d3d3;
+}
 
 /* TITLE PAGE STYLES */
 .titlepage {
@@ -149,6 +151,7 @@
   background-repeat: no-repeat; /* Prevents the image from repeating */
   height: 800px; /* Example height for the element */
   width: 100%; /* Example width for the element */
+ 
 }
 
 .clothing-gallery {
