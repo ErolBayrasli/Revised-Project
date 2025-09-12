@@ -160,7 +160,7 @@
 }
 
 .clothing-item {
-    background: #fff;
+    background: #e2e1e1;
     border-radius: 10px;
     box-shadow: 0 2px 8px rgba(0,0,0,0.08);
     padding: 16px;
@@ -182,3 +182,135 @@
     font-size: 2rem;
     color: #333;
 }
+
+.slideshow-container {
+    width: 350px;
+    margin: 40px auto 60px auto;
+    position: relative;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+    overflow: hidden;
+    padding-bottom: 20px;
+}
+.slides {
+    position: relative;
+    height: 260px;
+}
+.slide {
+    position: absolute;
+    width: 100%;
+    opacity: 0;
+    transition: opacity 0.5s;
+    text-align: center;
+}
+.slide img {
+    width: 100%;
+    max-height: 200px;
+    object-fit: cover;
+    border-radius: 10px 10px 0 0;
+}
+.slide-caption {
+    background: #f7f7f7;
+    padding: 10px 0;
+    color: #333;
+    font-size: 1.1rem;
+    border-radius: 0 0 10px 10px;
+}
+#slide1:checked ~ .slides .s1,
+#slide2:checked ~ .slides .s2,
+#slide3:checked ~ .slides .s3 {
+    opacity: 1;
+    position: relative;
+    z-index: 1;
+}
+.slideshow-nav {
+    text-align: center;
+    margin-top: 10px;
+}
+.slideshow-nav label {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    background: #bbb;
+    border-radius: 50%;
+    margin: 0 4px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+#slide1:checked ~ .slideshow-nav label[for="slide1"],
+#slide2:checked ~ .slideshow-nav label[for="slide2"],
+#slide3:checked ~ .slideshow-nav label[for="slide3"] {
+    background: #333;
+
+}
+
+.about-us, .reviews, .newsletter {
+    max-width: 700px;
+    margin: 40px auto;
+    background: #f9f9f9;
+    border-radius: 10px;
+    padding: 32px 24px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    text-align: center;
+}
+
+.about-us h2, .reviews h2, .newsletter h2 {
+    margin-bottom: 16px;
+    color: #222;
+}
+
+.review-list {
+    display: flex;
+  
+    gap: 18px;
+    margin-top: 18px;
+}
+
+.review {
+    background: #fff;
+    border-radius: 8px;
+    padding: 16px;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+}
+
+.review-text {
+    font-style: italic;
+    color: #444;
+}
+
+.review-author {
+    margin-top: 8px;
+    color: #888;
+    font-size: 0.95em;
+}
+
+.newsletter form {
+    margin-top: 14px;
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+}
+
+.newsletter input[type="email"] {
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 1em;
+}
+
+.newsletter button {
+    padding: 8px 18px;
+    background: #222;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background 0.2s;
+}
+
+.newsletter button:hover {
+    background: #444;
+}
+
