@@ -187,18 +187,19 @@
 }
 
 .slideshow-container {
-    width: 350px;
+    width: 800px;
+    max-width: 95vw;
     margin: 40px auto 60px auto;
     position: relative;
     background: #fff;
-    border-radius: 10px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+    border-radius: 16px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.12);
     overflow: hidden;
-    padding-bottom: 20px;
+    padding-bottom: 24px;
 }
 .slides {
     position: relative;
-    height: 260px;
+    height: 500px;
 }
 .slide {
     position: absolute;
@@ -209,7 +210,7 @@
 }
 .slide img {
     width: 100%;
-    max-height: 200px;
+    max-height: 420px;
     object-fit: cover;
     border-radius: 10px 10px 0 0;
 }
@@ -317,3 +318,198 @@
     background: #444;
 }
 
+/* Store Locations */
+.locations {
+    max-width: 700px;
+    margin: 40px auto;
+    background: #f7f7f7;
+    border-radius: 10px;
+    padding: 32px 24px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    text-align: center;
+}
+.location-list {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 18px;
+    flex-wrap: wrap;
+}
+.location {
+    background: #fff;
+    border-radius: 8px;
+    padding: 16px;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+    width: 180px;
+}
+
+/* FAQ */
+.faq {
+    max-width: 700px;
+    margin: 40px auto;
+    background: #f9f9f9;
+    border-radius: 10px;
+    padding: 32px 24px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+.faq-list {
+    margin-top: 18px;
+}
+.faq-item {
+    margin-bottom: 18px;
+}
+.faq-item h4 {
+    margin-bottom: 6px;
+    color: #222;
+}
+
+/* Contact Form */
+.contact-form {
+    max-width: 700px;
+    margin: 40px auto;
+    background: #f7f7f7;
+    border-radius: 10px;
+    padding: 32px 24px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    text-align: center;
+}
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 14px;
+}
+.contact-form input,
+.contact-form textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 1em;
+}
+.contact-form button {
+    padding: 10px 18px;
+    background: #222;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background 0.2s;
+}
+.contact-form button:hover {
+    background: #444;
+}
+
+
+/* Styles for the Buttons from UI Verse */
+
+/* From Uiverse.io by JaydipPrajapati1910 */ 
+.button {
+  --width: 170px;
+  --height: 35px;
+  --tooltip-height: 35px;
+  --tooltip-width: 90px;
+  --gap-between-tooltip-to-button: 18px;
+  --button-color: #aaa7a7;
+  --tooltip-color: #fff;
+  width: var(--width);
+  height: var(--height);
+  background: var(--button-color);
+  position: relative;
+  text-align: center;
+  border-radius: 0.45em;
+  font-family: "Arial";
+  transition: background 0.3s;
+}
+
+.button::before {
+  position: absolute;
+  content: attr(data-tooltip);
+  width: var(--tooltip-width);
+  height: var(--tooltip-height);
+  background-color: #555;
+  font-size: 0.9rem;
+  color: #fff;
+  border-radius: .25em;
+  line-height: var(--tooltip-height);
+  bottom: calc(var(--height) + var(--gap-between-tooltip-to-button) + 10px);
+  left: calc(50% - var(--tooltip-width) / 2);
+}
+
+.button::after {
+  position: absolute;
+  content: '';
+  width: 0;
+  height: 0;
+  border: 10px solid transparent;
+  border-top-color: #555;
+  left: calc(50% - 10px);
+  bottom: calc(100% + var(--gap-between-tooltip-to-button) - 10px);
+}
+
+.button::after,.button::before {
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.5s;
+}
+
+.text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.button-wrapper,.text,.icon {
+  overflow: hidden;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  color: #fff;
+}
+
+.text {
+  top: 0
+}
+
+.text,.icon {
+  transition: top 0.5s;
+}
+
+.icon {
+  color: #fff;
+  top: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon svg {
+  width: 24px;
+  height: 24px;
+}
+
+.button:hover {
+  background: #222;
+}
+
+.button:hover .text {
+  top: -100%;
+}
+
+.button:hover .icon {
+  top: 0;
+}
+
+.button:hover:before,.button:hover:after {
+  opacity: 1;
+  visibility: visible;
+}
+
+.button:hover:after {
+  bottom: calc(var(--height) + var(--gap-between-tooltip-to-button) - 20px);
+}
+
+.button:hover:before {
+  bottom: calc(var(--height) + var(--gap-between-tooltip-to-button));
+}
